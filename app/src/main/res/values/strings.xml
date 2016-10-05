@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="btn_NewActivity">Kolejne Activity</string>
+    <string name="lifetime">Activity1</string>
+    <string name="btn_SecondActivity">Activity1</string>
+    <string name="title_activity_main22">Main22Activity</string>
+    <string name="btn_PreviousActivity">Poprzednie Activity</string>
+    <string name="edit_message">Wiadmosc</string>
+    <string name="button_send"
+</resources>
