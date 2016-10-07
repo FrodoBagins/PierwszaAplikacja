@@ -9,8 +9,12 @@ import android.view.Menu;
 import android.widget.EditText;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.view.inputmethod.InputMethodManager;
+import android.content.Context;
 
 public class Main22Activity extends Activity {
+    private Button btnOpenNextActivity;
+
 
     Button button1;
     String text;
@@ -21,6 +25,17 @@ public class Main22Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main22);
         addListenerOnButton();
+
+
+        btnOpenNextActivity = (Button) findViewById(R.id.btnOpenNextActivity);
+        btnOpenNextActivity.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                onBackPressed();
+
+            }
+        });
+
 
 
     }
@@ -41,12 +56,21 @@ public class Main22Activity extends Activity {
 
             public void onClick(View view) {
 
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
+
+
                 EditText editText = (EditText)findViewById(R.id.editText1);
                 String text = editText.getText().toString();
 
-                Intent myIntent = new Intent(view.getContext(),Main2Activity.class);
-                myIntent.putExtra("mytext",text);
-                startActivity(myIntent);
+                Intent intent = new Intent();
+                intent.putExtra("mytext",text);
+                setResult(RESULT_OK, intent);
+
+               // finish();
 
 
             }
@@ -57,12 +81,6 @@ public class Main22Activity extends Activity {
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-
-    }
 
 }
