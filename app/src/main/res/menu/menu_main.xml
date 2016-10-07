@@ -1,6 +1,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/forward"
+        android:icon="@drawable/ic_arrow_back_white_24dp"
+        app:showAsAction="always"
+        android:title="Refresh"/>
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_backup_black_24dp"
+        app:showAsAction="always"
+        android:title="Refresh"/>
+
+    <item
+        android:id="@+id/item1"
+        android:orderInCategory="1"
+        android:title="Jeden">
+    </item>
+    <item
+        android:id="@+id/item2"
+        android:title="Dwa"
+        android:orderInCategory="2">
+    </item>
+    <item
+        android:id="@+id/item3"
+        android:orderInCategory="3"
+        android:title="Trzy">
+    </item>
 </menu>

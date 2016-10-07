@@ -5,15 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Main2Activity extends Activity {
+public class Main2Activity extends AppCompatActivity {
     private Button btnOpenNewActivity;
     private Button btnOpenNextActivity;
     TextView mTextview;
+
 
 
     @Override
@@ -72,11 +74,34 @@ public class Main2Activity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
+        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
 
     }
 
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.forward:
+
+                onBackPressed();
+                return true;
+
+            case R.id.action_refresh:
+                // User chose the "Favorite" action, mark the current item
+                // as a favorite...
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
 
 
 }
