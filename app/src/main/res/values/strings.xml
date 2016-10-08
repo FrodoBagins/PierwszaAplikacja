@@ -11,4 +11,6 @@
     <string name="button_send">Zatwierdz</string>
     <string name="popup_text">Okno Pop-up</string>
     <string name="check_box">Okno Pop-up</string>
+    <string name="check_box1">check1</string>
+    <string name="check_box2">check2</string>
 </resources>

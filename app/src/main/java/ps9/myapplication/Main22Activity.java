@@ -11,9 +11,13 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class Main22Activity extends Activity {
     private Button btnOpenNextActivity;
+
+
 
 
     Button button1;
@@ -35,6 +39,7 @@ public class Main22Activity extends Activity {
 
             }
         });
+
 
 
 
