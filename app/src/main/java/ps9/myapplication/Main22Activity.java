@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 import android.widget.CheckBox;
 import android.widget.Toast;
+import android.util.ArrayMap;
 
 public class Main22Activity extends Activity {
     private Button btnOpenNextActivity;
@@ -28,8 +29,8 @@ public class Main22Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main22);
-        addListenerOnButton();
 
+        addListenerOnButton();
 
         btnOpenNextActivity = (Button) findViewById(R.id.btnOpenNextActivity);
         btnOpenNextActivity.setOnClickListener(new View.OnClickListener() {
@@ -45,14 +46,7 @@ public class Main22Activity extends Activity {
 
     }
 
-  /*  public void sendMessage(View view){
-        Intent intent = new Intent(this, Main2Activity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        //startActivity(intent);
 
-    }  */
 
     public void addListenerOnButton() {
 
@@ -82,7 +76,8 @@ public class Main22Activity extends Activity {
         });
 
 
-        }
+
+    }
 
 
 
