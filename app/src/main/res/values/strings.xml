@@ -9,4 +9,6 @@
     <string name="btn_PreviousActivity">Poprzednie Activity</string>
     <string name="edit_message">Wiadmosc</string>
     <string name="button_send">Zatwierdz</string>
+    <string name="popup_text">Okno Pop-up</string>
+    <string name="check_box">Okno Pop-up</string>
 </resources>

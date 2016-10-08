@@ -1,12 +1,14 @@
 package ps9.myapplication;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
@@ -91,8 +93,30 @@ public class Main2Activity extends AppCompatActivity {
                 return true;
 
             case R.id.action_refresh:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
+
+                startActivity(new Intent(Main2Activity.this,Pop.class));
+
+
+                return true;
+
+
+            case R.id.item1:
+                ImageView mImageView;
+                mImageView = (ImageView) findViewById(R.id.android);
+                mImageView.setImageResource(R.drawable.android);
+
+
+                return true;
+
+            case R.id.item2:
+                btnOpenNextActivity = (Button) findViewById(R.id.btnOpenNextActivity);
+
+                btnOpenNextActivity.setBackgroundColor(Color.parseColor("#ff0000"));
+
+                btnOpenNewActivity = (Button) findViewById(R.id.btnOpenNewActivity);
+
+                btnOpenNewActivity.setBackgroundColor(Color.parseColor("#009999"));
+
                 return true;
 
             default:
